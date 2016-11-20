@@ -12,7 +12,7 @@
     "build": "env NODE_ENV='production' ./node_modules/.bin/webpack --progress --color -p",
     "lint": "./node_modules/.bin/eslint src/",
     "ci": "git-cz",
-    "semantic-release": "semantic-release pre && semantic-release post",
+    "semantic-release": "./node_modules/.bin/semantic-release pre && ./node_modules/.bin/semantic-release post",
     "test": "./node_modules/.bin/jest && npm run lint",
     "test:watch": "./node_modules/.bin/jest --watch"
   },
