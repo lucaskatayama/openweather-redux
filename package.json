@@ -1,0 +1,74 @@
+{
+  "name": "openweather-redux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:lucaskatayama/openweather-redux.git",
+    "type": "git"
+  },
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf docs/",
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "build": "env NODE_ENV='production' ./node_modules/.bin/webpack --progress --color -p",
+    "lint": "./node_modules/.bin/eslint src/",
+    "ci": "git-cz",
+    "semantic-release": "semantic-release pre && semantic-release post",
+    "test": "./node_modules/.bin/jest && npm run lint",
+    "test:watch": "./node_modules/.bin/jest --watch"
+  },
+  "author": "Lucas Katayama <lucaskatayama@gmail.com> (http://lucaskatayama.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.0",
+    "babel-jest": "^17.0.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "browser-sync": "^2.18.1",
+    "browser-sync-webpack-plugin": "^1.1.3",
+    "chai": "^3.5.0",
+    "commitizen": "^2.8.6",
+    "css-loader": "^0.25.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "enzyme": "^2.6.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-import-resolver-webpack": "^0.7.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "jest": "^17.0.3",
+    "react-addons-test-utils": "^15.4.0",
+    "rimraf": "^2.5.4",
+    "semantic-release": "^6.3.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-redux": "^4.4.6",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-thunk": "^2.1.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
+}
