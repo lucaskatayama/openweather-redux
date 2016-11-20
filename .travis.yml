@@ -21,7 +21,7 @@ after_success:
   - git commit -m "Build for gh-pages"
   - git config --global user.email "travis@travis.com"
   - git config --global user.name "TravisCI"
-  - git push origin master:master
+  - git push "https://${GH_TOKEN}@${GH_REF}" master:master
   - npm run semantic-release
 env:
   global:
