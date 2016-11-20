@@ -5,7 +5,7 @@ import * as types from 'constants/ActionTypes';
 export const fetchWeather = (q, units = 'metric') => (dispatch) => {
   if (!q) {
     dispatch({ type: types.WEATHER_FETCH_ERROR, payload: 'No city provided!' });
-    return new Promise();
+    return null;
   }
   dispatch({ type: types.WEATHER_FETCH_PENDING });
   return fetch(`${endpoint}/weather/?q=${q}&appid=${appid}&units=${units}`)
@@ -17,7 +17,7 @@ export const fetchWeather = (q, units = 'metric') => (dispatch) => {
 export const search = (q, units = 'metric') => (dispatch) => {
   if (!q) {
     dispatch({ type: types.WEATHER_SEARCH_ERROR, payload: 'No city provided!' });
-    return new Promise();
+    return null;
   }
   dispatch({ type: types.WEATHER_SEARCH_PENDING });
   return fetch(`${endpoint}/weather/?q=${q}&appid=${appid}&units=${units}`)
