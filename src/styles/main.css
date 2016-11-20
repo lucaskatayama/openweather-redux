@@ -19,3 +19,7 @@ body {
 .main {
   padding-top: 20px;
 }
+
+.container.app {
+  padding-top: 20px;
+}

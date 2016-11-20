@@ -4,7 +4,7 @@ import Navbar from 'containers/Navbar';
 const Main = props => (
   <div>
     <Navbar />
-    <div className="container">
+    <div className="container app">
       <div className="row">
         <div className="col-md-12">
           {props.children}
