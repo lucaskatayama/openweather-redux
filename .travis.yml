@@ -17,4 +17,7 @@ script:
   - npm run test
 after_success:
   - npm run build
+  - git add -A
+  - git commit -m "Build"
+  - git push origin master:master
   - npm run semantic-release
