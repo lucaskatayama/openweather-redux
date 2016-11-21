@@ -49,7 +49,7 @@ class SearchResults extends Component {
       results = (
         <div className="row">
           <div className="col-lg-3">
-            <WeatherMain data={this.props.results.main} />
+            <WeatherMain data={this.props.results} />
           </div>
           <div className="col-lg-9">
             <CityInfo city={this.props.results} />
