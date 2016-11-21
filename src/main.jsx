@@ -1,9 +1,9 @@
 import 'babel-polyfill';
 import 'isomorphic-fetch';
 import 'bootstrap/less/bootstrap.less';
-import 'bootstrap/less/theme.less';
 import 'font-awesome/css/font-awesome.min.css';
 import 'styles/main.css';
+
 
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -27,11 +27,14 @@ const DefinePlugin = new webpack.DefinePlugin({
   }
 });
 
+const WebpackProviderConfig = new webpack.ProvidePlugin({'$': 'jquery', 'window.jQuery': 'jquery', 'jQuery': 'jquery', 'window.$': 'jquery', 'React': 'react'})
+
 
 let plugins = [
   HTMLWebpackPluginConfig,
   BrowserSyncPluginConfig,
-  DefinePlugin
+  DefinePlugin,
+  WebpackProviderConfig
 ];
 
 
