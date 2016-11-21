@@ -12,7 +12,7 @@ const CityInfo = ({ city }) => (
 CityInfo.propTypes = {
   city: PropTypes.shape({
     name: PropTypes.string,
-    id: PropTypes.string,
+    id: PropTypes.number,
     sys: PropTypes.shape({
       country: PropTypes.string,
     }),

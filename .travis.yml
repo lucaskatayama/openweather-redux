@@ -23,7 +23,6 @@ after_success:
   - git add docs/
   - git commit -m "chore(build): Travis Build"
   - git push "https://${GH_TOKEN}@${GH_REF}" master:master
-  - npm run semantic-release
 env:
   global:
     - GH_REF: github.com/lucaskatayama/openweather-redux.git
