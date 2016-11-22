@@ -26,7 +26,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="bootcards-cards">
         {
           Object.keys(this.props.cities)
             .map(city => <Card key={city} units={this.props.units} {...this.props.cities[city]} />)

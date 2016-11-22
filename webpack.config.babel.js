@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import path from 'path';
 import { version } from './package.json';
 
@@ -34,7 +35,8 @@ let plugins = [
   HTMLWebpackPluginConfig,
   BrowserSyncPluginConfig,
   DefinePlugin,
-  WebpackProviderConfig
+  WebpackProviderConfig,
+  new FaviconsWebpackPlugin('styles/favicon.png'),
 ];
 
 

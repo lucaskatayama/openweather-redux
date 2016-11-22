@@ -23,24 +23,31 @@ const CityCard = (city) => {
 
   return (
     <div className="col-md-4">
-      <div className="col-md-12 well">
-        <h2>
-          <Link to={`/city/${city.id}`}>{city.name}</Link>,
-          <small>{city.country}</small>
-        </h2>
-        <h3>
-          <span style={{ padding: '20px 20px 20px 0' }}>
-            <WeatherImg icon={city.icon} />
-          </span>
-          <Temperature value={city.temp} units={city.units} /><br />
-        </h3>
-        <p>
-          <span style={{ textTransform: 'capitalize' }}>
-            {city.description}
-          </span>
-        </p>
-        <p>{city.pressure}hPa</p>
-        <p>{city.humidity}%</p>
+      <div className="panel panel-default">
+        <div className="panel-heading clearfix">
+          <h3 className="panel-title pull-left">
+            <Link to={`/city/${city.id}`}>{city.name}</Link>,
+            <small>{city.country}</small>
+          </h3>
+        </div>
+        <div className="list-group">
+          <div className="list-group-item">
+
+            <h3>
+              <span style={{ padding: '20px 20px 20px 0' }}>
+                <WeatherImg icon={city.icon} />
+              </span>
+              <Temperature value={city.temp} units={city.units} /><br />
+            </h3>
+            <span className="list-group-item-text">
+              <p style={{ textTransform: 'capitalize' }}>
+                {city.description}
+              </p>
+              <p>{city.pressure}hPa</p>
+              <p>{city.humidity}%</p>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
