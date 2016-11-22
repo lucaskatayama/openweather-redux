@@ -1,7 +1,9 @@
 import 'babel-polyfill';
 import 'isomorphic-fetch';
 import 'bootstrap/less/bootstrap.less';
+import 'weather-icons/css/weather-icons.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+
 import 'styles/main.css';
 
 
