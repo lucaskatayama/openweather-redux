@@ -14,6 +14,7 @@ const map = {
   '09n': 'night-showers',
   '10n': 'night-alt-hail',
   '13n': 'night-alt-snow',
+  '50n': 'night-fog',
 };
 // <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="Weather" />
 const WeatherImg = ({ icon }) => (
