@@ -19,8 +19,7 @@ const BrowserSyncPluginConfig = new BrowserSyncPlugin({
   proxy: 'http://localhost:8080/'
 }, {
   reload: false
-})
-
+});
 var PROD = process.env.NODE_ENV === 'production';
 const DefinePlugin = new webpack.DefinePlugin({
   'process.env': {
@@ -47,6 +46,7 @@ let loaders = [
   { test: /\.png$/, loader: "url-loader?limit=100000" },
   { test: /\.less$/, loader: "style-loader!css-loader!less-loader" },
   { test: /\.jpg$/, loader: "file-loader" },
+  { test: /\.json$/, loader: "json-loader" },
   { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
   { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream' },
   { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },

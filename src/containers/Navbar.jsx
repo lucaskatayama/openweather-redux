@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Search from 'components/Search';
 import Units from 'components/Units';
 import WeatherIcon from 'react-weathericons';
+import { VERSION } from 'config';
 
 const mapStateToProps = state => ({
   units: state.units,
@@ -15,7 +16,9 @@ const Navbar = ({ units }) => (
         <a className="navbar-brand" style={{ color: 'white' }} href="#">
           <WeatherIcon name="day-sunny" />{' '}
           OpenWeather Redux
+          <small>{' '}{VERSION}</small>
         </a>
+
       </div>
       <div id="navbar" className="navbar-form navbar-right">
         <Units units={units} />
