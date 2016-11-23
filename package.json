@@ -1,6 +1,6 @@
 {
   "name": "openweather-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": {
     "url": "git@github.com:lucaskatayama/openweather-redux.git",
@@ -11,10 +11,11 @@
     "start": "./node_modules/.bin/webpack-dev-server",
     "build": "env NODE_ENV='production' ./node_modules/.bin/webpack --progress --color -p",
     "lint": "./node_modules/.bin/eslint src/",
-    "ci": "git-cz",
     "semantic-release": "./node_modules/.bin/semantic-release pre && ./node_modules/.bin/semantic-release post",
     "test": "./node_modules/.bin/jest && npm run lint",
-    "test:watch": "./node_modules/.bin/jest --watch"
+    "test:watch": "./node_modules/.bin/jest --watch",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "commit": "./node_modules/.bin/git-cz"
   },
   "author": "Lucas Katayama <lucaskatayama@gmail.com> (http://lucaskatayama.com/)",
   "license": "MIT",
@@ -43,6 +44,7 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
     "jest": "^17.0.3",
+    "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "nock": "^9.0.2",
@@ -62,6 +64,7 @@
     "bootcards": "^1.1.2",
     "bootstrap": "^3.3.7",
     "conventional-changelog": "^1.1.0",
+    "conventional-changelog-cli": "^1.2.0",
     "font-awesome": "^4.7.0",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.4.0",
