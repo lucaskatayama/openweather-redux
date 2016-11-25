@@ -1,6 +1,6 @@
 {
   "name": "openweather-redux",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": {
     "url": "git@github.com:lucaskatayama/openweather-redux.git",
