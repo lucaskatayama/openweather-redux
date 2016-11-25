@@ -5,6 +5,7 @@ const map = {
   '50d': 'day-fog',
   '01d': 'day-sunny',
   '02d': 'day-cloudy',
+  '03d': 'day-cloudy',
   '04d': 'cloudy',
   '09d': 'day-showers',
   '01n': 'night-clear',
