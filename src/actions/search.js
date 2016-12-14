@@ -1,6 +1,7 @@
 import 'isomorphic-fetch';
 import * as types from 'constants/ActionTypes';
-import * as ow from 'utils/openweather';
+import ow from 'utils/openweather';
+import { graphql } from 'graphql';
 
 export const search = (q, units = 'metric') => (dispatch) => {
   if (!q) {
@@ -8,7 +9,20 @@ export const search = (q, units = 'metric') => (dispatch) => {
     return null;
   }
   dispatch({ type: types.WEATHER_SEARCH_PENDING });
-  return ow.get('weather', { q, units })
-        .then(json => dispatch({ type: types.WEATHER_SEARCH_SUCCESS, payload: json }))
-        .catch(err => dispatch({ type: types.WEATHER_SEARCH_ERROR, payload: err }));
+  return graphql(ow, `{searchWeather(q:"${q}", units:"${units}"){
+    description,
+    icon,
+    country,
+    temp,
+    temp_max,
+    temp_min,
+    pressure,
+    humidity,
+    name,
+    id}}`)
+    .then(json => dispatch({
+      type: types.WEATHER_SEARCH_SUCCESS,
+      payload: json.data.searchWeather,
+    }))
+    .catch(err => dispatch({ type: types.WEATHER_SEARCH_ERROR, payload: err }));
 };
